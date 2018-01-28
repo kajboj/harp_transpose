@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "name": "harp",
+  "version": "1.0.0",
+  "description": "transposing harp tabs",
+  "scripts": {
+    "watch": "webpack --watch",
+    "unit-test": "jest --config jest-unit.json",
+    "one-test": "jest --config jest-unit-dev.json --runInBand",
+    "debug-test": "node debug ./node_modules/jest-cli/bin/jest.js --config jest-unit-dev.json --runInBand",
+    "test": "npm run unit-test && npm run lint",
+    "lint": "standard src/js/**/*.js",
+    "lint-fix": "standard --fix src/js/**/*.js"
+  },
+  "author": "Kajetan Bojko",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "latest",
+    "jest": "latest",
+    "jest-cli": "latest",
+    "live-server": "^1.2.0",
+    "standard": "latest",
+    "webpack": "latest",
+    "express": "latest"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  }
+}
