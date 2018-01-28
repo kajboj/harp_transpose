@@ -1,11 +1,17 @@
-import join from 'lodash/join'
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-function component () {
-  var element = document.createElement('div')
-
-  element.innerHTML = join(['Hello', 'webpack'], ' ')
-
-  return element
+class HelloMessage extends React.Component {
+  render() {
+    return (
+      <div>
+        Hello {this.props.name}
+      </div>
+    );
+  }
 }
 
-document.body.appendChild(component())
+ReactDOM.render(
+  <HelloMessage name="World" />,
+  document.getElementById('webapp')
+)
